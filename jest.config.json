@@ -1,0 +1,21 @@
+{
+  "collectCoverageFrom": ["src/**/*.(ts|tsx)", "!src/**/*.d.ts", "!**/__fixtures__/**"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.js$": "babel-jest"
+  },
+  "transformIgnorePatterns": ["<rootDir>/node_modules/(?!lodash-es)"],
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "tsconfig.test.json"
+    }
+  },
+  "testMatch": ["**/src/**/*.test.(ts|tsx)", "**/tests/**/*.test.ts"],
+  "setupTestFrameworkScriptFile": "<rootDir>/config/test/setup.ts",
+  "setupFiles": ["isomorphic-unfetch"],
+  "moduleNameMapper": {
+    "\\.svg$": "<rootDir>/config/test/mocks/fileMock.ts",
+    "^~/(.+)": "<rootDir>/src/$1"
+  }
+}

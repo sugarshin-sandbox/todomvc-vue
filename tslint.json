@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
+    "prettier": true,
+    "jsx-boolean-value": [true, "never"]
+  },
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ]
+}
